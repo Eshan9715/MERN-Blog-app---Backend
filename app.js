@@ -15,7 +15,7 @@ app.use("/api/blogs",blogRouter);
 
 const DB_URL = process.env.MONGODB_KEY;
 
-mongoose.connect(DB_URL)
+mongoose.connect('mongodb+srv://admin:7QrDLB6slGrzRWdr@cluster0.1g6ydcb.mongodb.net/?retryWrites=true&w=majority')
 .then(()=>
     app.listen(5000))
 .then(()=>
