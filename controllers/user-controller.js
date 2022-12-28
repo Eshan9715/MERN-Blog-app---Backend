@@ -52,11 +52,12 @@ export const signup = async (req,res,next)=>{
         blogs:[],
     });
     try{
-       await user.save();
+       const newUser = await user.save();
+       return res.status(201).json({newUser})
+
     }catch(err){
         return console.log(err)
     }
-    return res.status(201).json({user})
 
 }
 
